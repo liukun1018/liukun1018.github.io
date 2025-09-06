@@ -1,262 +1,35 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>My first post | 大表哥大表哥爱吃鱼</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="《给博客换个新家：从Hexo到Hugo，记录生活的新起点》引言：为什么又要折腾博客？ 初衷：作为文学与历史专业出身的人，我对文字有种天然的亲近感。当初搭建Hexo博客，并非出于技术热情，而是想找一个纯净的写作空间，记录儿子的成长点滴、读书心得，以及那些不适合发表在社交平台的随想。   困境：曾经的Hexo博客承载了许多亲子日常，但旧电脑退役后，移植过程遇到重重阻碍（网络问题、依赖冲突），最终让我决">
-<meta property="og:type" content="article">
-<meta property="og:title" content="My first post">
-<meta property="og:url" content="https://liukun1018.github.io/2025/09/06/post/index.html">
-<meta property="og:site_name" content="大表哥大表哥爱吃鱼">
-<meta property="og:description" content="《给博客换个新家：从Hexo到Hugo，记录生活的新起点》引言：为什么又要折腾博客？ 初衷：作为文学与历史专业出身的人，我对文字有种天然的亲近感。当初搭建Hexo博客，并非出于技术热情，而是想找一个纯净的写作空间，记录儿子的成长点滴、读书心得，以及那些不适合发表在社交平台的随想。   困境：曾经的Hexo博客承载了许多亲子日常，但旧电脑退役后，移植过程遇到重重阻碍（网络问题、依赖冲突），最终让我决">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-09-06T14:46:03.000Z">
-<meta property="article:modified_time" content="2025-09-06T14:48:29.969Z">
-<meta property="article:author" content="Kaine">
-<meta property="article:tag" content="Hexo">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="大表哥大表哥爱吃鱼" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+extends includes/layout.pug
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+block content
+  #post
+    if top_img === false
+      include includes/header/post-info.pug
 
-  
-  
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+    article#article-container.container.post-content
+      if theme.noticeOutdate.enable && page.noticeOutdate !== false
+        include includes/post/outdate-notice.pug
+      else
+        !=page.content
+    include includes/post/post-copyright.pug
+    .tag_share
+      if (page.tags.length > 0 && theme.post_meta.post.tags)
+        .post-meta__tag-list
+          each item, index in page.tags.data
+            a(href=url_for(item.path)).post-meta__tags #[=item.name]
+      include includes/third-party/share/index.pug
 
-<meta name="generator" content="Hexo 7.3.0"></head>
+    if theme.reward.enable && theme.reward.QR_code
+      !=partial('includes/post/reward', {}, {cache: true})
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">大表哥大表哥爱吃鱼</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">Life-Thinking-Traveling</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://liukun1018.github.io"></form>
-      </div>
-    </div>
-  </div>
-</header>
+    //- ad
+    if theme.ad && theme.ad.post
+      .ads-wrap!=theme.ad.post
 
-      <div class="outer">
-        <section id="main"><article id="post-post" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2025/09/06/post/" class="article-date">
-  <time class="dt-published" datetime="2025-09-06T14:46:03.000Z" itemprop="datePublished">2025-09-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="p-name article-title" itemprop="headline name">
-      My first post
-    </h1>
-  
+    if theme.post_pagination
+      include includes/pagination.pug
+    if theme.related_post && theme.related_post.enable
+      != related_posts(page,site.posts)
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="《给博客换个新家：从Hexo到Hugo，记录生活的新起点》"><a href="#《给博客换个新家：从Hexo到Hugo，记录生活的新起点》" class="headerlink" title="《给博客换个新家：从Hexo到Hugo，记录生活的新起点》"></a>《给博客换个新家：从Hexo到Hugo，记录生活的新起点》</h1><h2 id="引言：为什么又要折腾博客？"><a href="#引言：为什么又要折腾博客？" class="headerlink" title="引言：为什么又要折腾博客？"></a>引言：为什么又要折腾博客？</h2><ul>
-<li><strong>初衷</strong>：作为文学与历史专业出身的人，我对文字有种天然的亲近感。当初搭建Hexo博客，并非出于技术热情，而是想找一个<strong>纯净的写作空间</strong>，记录儿子的成长点滴、读书心得，以及那些不适合发表在社交平台的随想。  </li>
-<li><strong>困境</strong>：曾经的Hexo博客承载了许多亲子日常，但旧电脑退役后，移植过程遇到重重阻碍（网络问题、依赖冲突），最终让我决定<strong>重新开始</strong>——这次选择了Hugo。</li>
-</ul>
-<hr>
-<h2 id="一、从Hexo到Hugo：非技术者的迁移心路"><a href="#一、从Hexo到Hugo：非技术者的迁移心路" class="headerlink" title="一、从Hexo到Hugo：非技术者的迁移心路"></a>一、从Hexo到Hugo：非技术者的迁移心路</h2><h3 id="1-为什么选择Hugo？"><a href="#1-为什么选择Hugo？" class="headerlink" title="1. 为什么选择Hugo？"></a>1. <strong>为什么选择Hugo？</strong></h3><ul>
-<li><strong>速度与简单</strong>：Hugo的编译速度远超Hexo（生成上千篇文章仅需几秒），且无需依赖Node.js环境，对非技术者更友好。  </li>
-<li><strong>内容为王</strong>：我的目标是写作，而非折腾技术。Hugo的配置更直观，内容管理更灵活（所有文章用Markdown书写，无需复杂插件）。</li>
-</ul>
-<h3 id="2-迁移中最头疼的问题"><a href="#2-迁移中最头疼的问题" class="headerlink" title="2. 迁移中最头疼的问题"></a>2. <strong>迁移中最头疼的问题</strong></h3><ul>
-<li><strong>网络困境</strong>：第一次搭建Hexo时，大量时间花在“科学上网”和依赖下载上；第二次借助AI工具（如DeepSeek），快速找到解决方案，甚至自动生成配置代码。  </li>
-<li><strong>数据迁移</strong>：亲手记录的亲子日记是核心资产。我手动复制了Markdown文件，并简化了Front Matter（Hugo的元数据更简洁）。</li>
-</ul>
-<hr>
-<h2 id="二、重新开始：写作的意义大于技术"><a href="#二、重新开始：写作的意义大于技术" class="headerlink" title="二、重新开始：写作的意义大于技术"></a>二、重新开始：写作的意义大于技术</h2><h3 id="1-博客的本质是记录"><a href="#1-博客的本质是记录" class="headerlink" title="1. 博客的本质是记录"></a>1. <strong>博客的本质是记录</strong></h3><ul>
-<li>我曾沉迷于更换主题、优化SEO，后来发现：<strong>读者只关心内容是否打动人心</strong>。儿子的第一次微笑、他学会叫“妈妈”的那天——这些瞬间远比技术细节珍贵。  </li>
-<li>在Hugo中，我选择了极简主题（如Journal），专注写作而非样式。</li>
-</ul>
-<h3 id="2-给同样非技术者的建议"><a href="#2-给同样非技术者的建议" class="headerlink" title="2. 给同样非技术者的建议"></a>2. <strong>给同样非技术者的建议</strong></h3><ul>
-<li><strong>优先解决网络问题</strong>：稳定的网络环境能节省90%时间（可用国内镜像源或科学上网）。  </li>
-<li><strong>善用AI工具</strong>：遇到错误时，直接向AI提问（如“Hugo部署失败如何解决？”），比手动搜索更高效。  </li>
-<li><strong>内容备份至上</strong>：定期将Markdown文件备份到云盘或GitHub，避免再次丢失。</li>
-</ul>
-<hr>
-<h2 id="三、未来计划：在Hugo中继续书写生活"><a href="#三、未来计划：在Hugo中继续书写生活" class="headerlink" title="三、未来计划：在Hugo中继续书写生活"></a>三、未来计划：在Hugo中继续书写生活</h2><ol>
-<li><strong>亲子专栏</strong>：持续记录儿子的成长，未来整理成册作为他的生日礼物。  </li>
-<li><strong>读书笔记</strong>：分享文学和历史类的阅读心得，结合专业背景输出深度内容。  </li>
-<li><strong>技术避坑</strong>：以非技术视角写“Hugo入门指南”，帮助同样背景的人少走弯路。</li>
-</ol>
-<hr>
-<h2 id="结语：博客是时代的私人史"><a href="#结语：博客是时代的私人史" class="headerlink" title="结语：博客是时代的私人史"></a>结语：博客是时代的私人史</h2><blockquote>
-<p>“技术会过时，平台会消亡，但文字是永恒的。”<br>从Hexo到Hugo，变的只是工具，不变的是<strong>记录生活的初衷</strong>。这里是我的数字书房，欢迎你来读故事、聊生活——毕竟，博客的本质是“人”，而非代码。  </p>
-</blockquote>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://liukun1018.github.io/2025/09/06/post/" data-id="cmf8dq3dm00004oepevqq4g46" data-title="My first post" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
-
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-  
-    <a href="/2025/09/06/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">后一篇</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/09/">九月 2025</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2025/09/06/post/">My first post</a>
-          </li>
-        
-          <li>
-            <a href="/2025/09/06/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2025 Kaine<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.6.4.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
-</html>
+    if page.comments !== false && theme.comments.use
+      - var commentsJsLoad = true
+      !=partial('includes/third-party/comments/index', {}, {cache: true})
