@@ -1,3 +1,4 @@
+https://liukun1018.github.io/2025/09/06/post/
 https://liukun1018.github.io/categories/index-2.html
 https://liukun1018.github.io/about/index-3.html
 https://liukun1018.github.io/tags/index-2.html
@@ -17,3 +18,4 @@ https://liukun1018.github.io/index/index.html
 https://liukun1018.github.io/about/index.html
 https://liukun1018.github.io/2025/09/06/hello-world/
 https://liukun1018.github.io/
+https://liukun1018.github.io/tags/Hexo/

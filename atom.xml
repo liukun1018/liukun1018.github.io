@@ -6,7 +6,7 @@
   <link href="https://liukun1018.github.io/atom.xml" rel="self"/>
   
   <link href="https://liukun1018.github.io/"/>
-  <updated>1985-10-26T08:15:00.000Z</updated>
+  <updated>2025-09-07T03:41:07.261Z</updated>
   <id>https://liukun1018.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>My first post</title>
+    <link href="https://liukun1018.github.io/2025/09/06/post/"/>
+    <id>https://liukun1018.github.io/2025/09/06/post/</id>
+    <published>2025-09-06T14:46:03.000Z</published>
+    <updated>2025-09-07T03:41:07.261Z</updated>
+    
+    <content type="html"><![CDATA[<div class=".article-gallery"><h1 id="《给博客换个新家：从Hexo到Hugo，记录生活的新起点》"><a href="#《给博客换个新家：从Hexo到Hugo，记录生活的新起点》" class="headerlink" title="《给博客换个新家：从Hexo到Hugo，记录生活的新起点》"></a>《给博客换个新家：从Hexo到Hugo，记录生活的新起点》</h1><h2 id="引言：为什么又要折腾博客？"><a href="#引言：为什么又要折腾博客？" class="headerlink" title="引言：为什么又要折腾博客？"></a>引言：为什么又要折腾博客？</h2><ul><li><strong>初衷</strong>：作为文学与历史专业出身的人，我对文字有种天然的亲近感。当初搭建Hexo博客，并非出于技术热情，而是想找一个<strong>纯净的写作空间</strong>，记录儿子的成长点滴、读书心得，以及那些不适合发表在社交平台的随想。  </li><li><strong>困境</strong>：曾经的Hexo博客承载了许多亲子日常，但旧电脑退役后，移植过程遇到重重阻碍（网络问题、依赖冲突），最终让我决定<strong>重新开始</strong>——这次选择了Hugo。</li></ul><hr><h2 id="一、从Hexo到Hugo：非技术者的迁移心路"><a href="#一、从Hexo到Hugo：非技术者的迁移心路" class="headerlink" title="一、从Hexo到Hugo：非技术者的迁移心路"></a>一、从Hexo到Hugo：非技术者的迁移心路</h2><h3 id="1-为什么选择Hugo？"><a href="#1-为什么选择Hugo？" class="headerlink" title="1. 为什么选择Hugo？"></a>1. <strong>为什么选择Hugo？</strong></h3><ul><li><strong>速度与简单</strong>：Hugo的编译速度远超Hexo（生成上千篇文章仅需几秒），且无需依赖Node.js环境，对非技术者更友好。  </li><li><strong>内容为王</strong>：我的目标是写作，而非折腾技术。Hugo的配置更直观，内容管理更灵活（所有文章用Markdown书写，无需复杂插件）。</li></ul><h3 id="2-迁移中最头疼的问题"><a href="#2-迁移中最头疼的问题" class="headerlink" title="2. 迁移中最头疼的问题"></a>2. <strong>迁移中最头疼的问题</strong></h3><ul><li><strong>网络困境</strong>：第一次搭建Hexo时，大量时间花在“科学上网”和依赖下载上；第二次借助AI工具（如DeepSeek），快速找到解决方案，甚至自动生成配置代码。  </li><li><strong>数据迁移</strong>：亲手记录的亲子日记是核心资产。我手动复制了Markdown文件，并简化了Front Matter（Hugo的元数据更简洁）。</li></ul><hr><h2 id="二、重新开始：写作的意义大于技术"><a href="#二、重新开始：写作的意义大于技术" class="headerlink" title="二、重新开始：写作的意义大于技术"></a>二、重新开始：写作的意义大于技术</h2><h3 id="1-博客的本质是记录"><a href="#1-博客的本质是记录" class="headerlink" title="1. 博客的本质是记录"></a>1. <strong>博客的本质是记录</strong></h3><ul><li>我曾沉迷于更换主题、优化SEO，后来发现：<strong>读者只关心内容是否打动人心</strong>。儿子的第一次微笑、他学会叫“妈妈”的那天——这些瞬间远比技术细节珍贵。  </li><li>在Hugo中，我选择了极简主题（如Journal），专注写作而非样式。</li></ul><h3 id="2-给同样非技术者的建议"><a href="#2-给同样非技术者的建议" class="headerlink" title="2. 给同样非技术者的建议"></a>2. <strong>给同样非技术者的建议</strong></h3><ul><li><strong>优先解决网络问题</strong>：稳定的网络环境能节省90%时间（可用国内镜像源或科学上网）。  </li><li><strong>善用AI工具</strong>：遇到错误时，直接向AI提问（如“Hugo部署失败如何解决？”），比手动搜索更高效。  </li><li><strong>内容备份至上</strong>：定期将Markdown文件备份到云盘或GitHub，避免再次丢失。</li></ul><hr><h2 id="三、未来计划：在Hugo中继续书写生活"><a href="#三、未来计划：在Hugo中继续书写生活" class="headerlink" title="三、未来计划：在Hugo中继续书写生活"></a>三、未来计划：在Hugo中继续书写生活</h2><ol><li><strong>亲子专栏</strong>：持续记录儿子的成长，未来整理成册作为他的生日礼物。  </li><li><strong>读书笔记</strong>：分享文学和历史类的阅读心得，结合专业背景输出深度内容。  </li><li><strong>技术避坑</strong>：以非技术视角写“Hugo入门指南”，帮助同样背景的人少走弯路。</li></ol><hr><h2 id="结语：博客是时代的私人史"><a href="#结语：博客是时代的私人史" class="headerlink" title="结语：博客是时代的私人史"></a>结语：博客是时代的私人史</h2><blockquote><p>“技术会过时，平台会消亡，但文字是永恒的。”<br>从Hexo到Hugo，变的只是工具，不变的是<strong>记录生活的初衷</strong>。这里是我的数字书房，欢迎你来读故事、聊生活——毕竟，博客的本质是“人”，而非代码。  </p></blockquote></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;.article-gallery&quot;&gt;&lt;h1 id=&quot;《给博客换个新家：从Hexo到Hugo，记录生活的新起点》&quot;&gt;&lt;a href=&quot;#《给博客换个新家：从Hexo到Hugo，记录生活的新起点》&quot; class=&quot;headerlink&quot; title=&quot;《给博客</summary>
+      
+    
+    
+    
+    
+    <category term="Hexo" scheme="https://liukun1018.github.io/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>

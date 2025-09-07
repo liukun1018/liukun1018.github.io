@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://liukun1018.github.io/2025/09/06/post/</loc>
+    
+    <lastmod>2025-09-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://liukun1018.github.io/categories/index-2.html</loc>
     
     <lastmod>2025-09-07</lastmod>
@@ -171,6 +180,13 @@
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>https://liukun1018.github.io/tags/Hexo/</loc>
+    <lastmod>2025-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 
   
