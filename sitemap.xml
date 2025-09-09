@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://liukun1018.github.io/about/index-3.html</loc>
+    <loc>https://liukun1018.github.io/about/index.html</loc>
     
     <lastmod>2025-09-09</lastmod>
     
@@ -290,15 +290,6 @@
   </url>
   
   <url>
-    <loc>https://liukun1018.github.io/about/index-2.html</loc>
-    
-    <lastmod>2025-09-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://liukun1018.github.io/list/index-1.html</loc>
     
     <lastmod>2025-09-07</lastmod>
@@ -326,27 +317,9 @@
   </url>
   
   <url>
-    <loc>https://liukun1018.github.io/about/index-1.html</loc>
-    
-    <lastmod>2025-09-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://liukun1018.github.io/list/index.html</loc>
     
     <lastmod>2025-09-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://liukun1018.github.io/about/index.html</loc>
-    
-    <lastmod>2025-09-06</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
