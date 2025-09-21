@@ -1,4 +1,4 @@
-https://liukun1018.github.io/list/index-3.html
+https://liukun1018.github.io/list/index.html
 https://liukun1018.github.io/about/index.html
 https://liukun1018.github.io/index/index-2.html
 https://liukun1018.github.io/2025/09/20/%E4%B9%9D%E6%9C%88%E7%9A%84%E4%B8%80%E5%A4%A9/
@@ -37,13 +37,10 @@ https://liukun1018.github.io/2025/09/07/%E5%BE%90%E5%A4%8D%E8%A7%82%EF%BC%9A%E8%
 https://liukun1018.github.io/2025/09/06/post/
 https://liukun1018.github.io/categories/index-2.html
 https://liukun1018.github.io/tags/index-2.html
-https://liukun1018.github.io/list/index-2.html
 https://liukun1018.github.io/categories/index-1.html
 https://liukun1018.github.io/tags/index-1.html
-https://liukun1018.github.io/list/index-1.html
 https://liukun1018.github.io/categories/index.html
 https://liukun1018.github.io/tags/index.html
-https://liukun1018.github.io/list/index.html
 https://liukun1018.github.io/2025/09/06/hello-world/
 https://liukun1018.github.io/
 https://liukun1018.github.io/tags/Hexo/
